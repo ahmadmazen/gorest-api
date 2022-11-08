@@ -1,9 +1,12 @@
 package sa.lendo.gorest.api.Oauthresourceserver.config;
 
+import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 @EnableWebSecurity
 public class ResourceServerConfig {
@@ -18,5 +21,14 @@ public class ResourceServerConfig {
                 .oauth2ResourceServer()
                 .jwt();
         return http.build();
+    }
+    @Bean
+    public Retrofit retrofit() {
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        return new Retrofit.Builder()
+                .baseUrl("https://api.github.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
     }
 }

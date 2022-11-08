@@ -15,8 +15,8 @@
 
     <modules>
         <module>gorest-api-client</module>
-        <module>Oauth-authorization-server</module>
-        <module>Oauth-resource-server</module>
+        <module>gorest-authorization-server</module>
+        <module>gorest-resource-server</module>
     </modules>
 
 </project>
