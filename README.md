@@ -1,6 +1,6 @@
 ### Pre-requisites:
 - You should have MySQL Database installed on your machine.
-- Create a New Scheme with the name <user_registration>.
+- Create a New Schema with the name <user_registration>.
   or use that script: 
 ```
 CREATE SCHEMA 'user_registration'
