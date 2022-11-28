@@ -5,7 +5,7 @@
 ```
 CREATE SCHEMA 'user_registration'
 ```
-- Run the following script to insert the default users, you can rather
+- Run the following script to insert the default user, you can rather
 add yours:
 ```
   INSERT INTO `user_registration`.`user` (`id`, `email`, `enabled`, `first_name`, `last_name`, `password`, `role`) VALUES ('1', 'ahmed.mazen87@yahoo.com', b'1', 'Ahmed', 'Mazen', '$2a$12$A18M0vlDeQ8/7H208KfS8eY9lroFKOLA/uFtIFFSB5RnJ4leqLXNq', 'USER');
